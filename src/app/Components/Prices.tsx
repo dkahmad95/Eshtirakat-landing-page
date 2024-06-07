@@ -13,7 +13,7 @@ const Prices = () => {
           خطط وأسعار
           <span className="text-[#F29912]"> للجميع</span>
         </h1>
-        <span className=" text-sm  md:text-lg  w-1/2 text-center text-[#052533] opacity-70">
+        <span className=" text-sm  md:text-lg  w-3/4 text-center text-[#052533] opacity-70">
           نقدم خطط أسعار متنوعة تتناسب مع حجم ونوع عملك. سواء كنت تدير عددًا
           صغيرًا أو كبيرًا من الاشتراكات، لدينا الحل الأمثل لك.
         </span>
@@ -31,7 +31,7 @@ const Prices = () => {
       </div>
 
       {/* more info */}
-      <span className=" text-xs  md:text-sm  w-1/2 text-center text-[#052533] opacity-70">
+      <span className=" text-xs  md:text-sm  w-3/4 text-center text-[#052533] opacity-70">
         لمعرفة المزيد عن خططنا وكيف يمكنها أن تساهم في تطوير عملك، يرجى التواصل
         مع فريق المبيعات لدينا أو طلب عرض توضيحي.
       </span>
@@ -41,7 +41,7 @@ const Prices = () => {
         <Card activeButton={activeButton}  />
       </div>
       {/* bottom info */}
-      <span className="text-xs md:text-sm text-[#052533] w-1/2 text-center opacity-70 mb-10">
+      <span className="text-xs md:text-sm text-[#052533] w-3/4 text-center opacity-70 mb-10">
         جميع الأسعار المذكورة أعلاه تشمل كافة الميزات الأساسية. الأسعار المعروضة
         للخطط الإضافية, هي لتوسيع نطاق الخدمة وتلبية احتياجات عملك المتنامية.
       </span>

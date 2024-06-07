@@ -11,6 +11,7 @@ const Hero = () => {
         alt="Hero Background"
         fill
         className="absolute inset-0 z-0  w-full h-full"
+        priority
       />
 
       {/* Hero Info and image */}
@@ -27,7 +28,7 @@ const Hero = () => {
             </h1>
           </div>
           <div className="flex-1 flex flex-col items-center md:items-start mt-4 justify-center">
-            <p className=" mt-4 mb-8 w-1/2 text-lg md:w-full mx-auto md:mx-0 md:text-start">
+            <p className=" md:mt-4 mb-8 w-3/4 text-lg md:w-full mx-auto md:mx-0 md:text-start">
               تجربة سلسة وسهلة للتحكم في اشتراكاتك الكهربائية اين ما كنت,
               باستخدام تكنولوجيا مبتكرة وأنظمة ذكية وللمستهلكين، حمّل التطبيق
               الآن لمتابعة فواتيرك بسهولة

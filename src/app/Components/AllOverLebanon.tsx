@@ -27,7 +27,7 @@ const AllOverLebanon = () => {
             <span className="text-[#F29912]"> إشتراكات </span>
             في كل لبنان
           </h1>
-          <span className=" text-sm  md:text-lg  w-1/2 text-center text-[#F6FBFE] opacity-70">
+          <span className=" text-sm  md:text-lg  w-3/4 text-center text-[#F6FBFE] opacity-70">
             الريادة في إدارة اشتراكات المولدات بلبنان. انضم إلى شبكتنا المتنامية
             من أصحاب المولدات الذين يحققون الكفاءة والدقة في إدارة عملياتهم
             واشتراكات مستهلكيهم، كل ذلك بفضل حلولنا المبتكرة.
@@ -35,23 +35,18 @@ const AllOverLebanon = () => {
         </div>
         {/* counters */}
         <div className="text-white flex flex-row justify-center items-center gap-x-4 md:gap-x-10 mt-8">
-          {/* line */}
-          <div className="h-full flex justify-center">
-            <div className="w-[1px] bg-[#F6FBFE] opacity-50 "></div>
-          </div>
-          {counterData.map((counts) => (
-            <>
-              <Badge
-                key={counts.id}
-                endCountNum={counts.count}
-                badgeText={counts.title}
-              />
-              {/* line */}
-              <div key={counts.id} className="h-full flex justify-center">
-                <div className="w-[1px] bg-[#F6FBFE] opacity-50 "></div>
-              </div>
-            </>
+          {counterData.map((counts, index) => (
+            <React.Fragment key={counts.id}>
+              <Badge endCountNum={counts.count} badgeText={counts.title} />
+              {/* Line */}
+              {index < counterData.length - 1 && (
+                <div className="h-full flex justify-center">
+                  <div className="w-[1px] bg-[#F6FBFE] opacity-50 "></div>
+                </div>
+              )}
+            </React.Fragment>
           ))}
+          
         </div>
       </div>
     </main>

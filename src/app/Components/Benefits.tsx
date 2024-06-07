@@ -35,7 +35,7 @@ const Benefits = () => {
           <span className="text-[#F29912]"> إشتراكات</span>
         </h1>
         {/* subtitle */}
-        <div className=" text-sm md:text-lg  w-1/2 text-center text-[#052533] opacity-70">
+        <div className=" text-sm md:text-lg  w-3/4 md:w-1/2 text-center text-[#052533] opacity-70">
           ببساطة، 'إشتراكات' هي المنصة المثالية لكل من يبحث عن سهولة وكفاءة في
           إدارة الاشتراكات. مع تصميم متقدم وواجهة مستخدم سهلة الاستخدام، نحن
           نجعل عملية إدارة وتحليل اشتراكاتك أمرًا سلسًا ومباشرًا. سواء كنت تدير
@@ -47,13 +47,13 @@ const Benefits = () => {
         {benefits.map((benefit) => (
           <div
             key={benefit.id}
-            className="md:min-h-[220px] md:max-w-[366px] border-2 rounded-md border-[#C4C7C8] bg-white"
+            className="md:min-h-[200px] md:max-w-[366px] border-2 rounded-md border-[#C4C7C8] bg-white"
           >
             <div className="flex flex-row justify-start m-4">
               <div>{benefit.icon}</div>
-              <div className="mr-4 text-xl font-bold">{benefit.title}</div>
+              <div className="mr-4 text-lg md:text-xl font-bold">{benefit.title}</div>
             </div>
-            <div className="flex text-sm md:text-lg m-4 text-[#052533] opacity-70">
+            <div className="flex text-xs md:text-sm m-4 text-[#052533] opacity-70">
               {benefit.description}
             </div>
           </div>

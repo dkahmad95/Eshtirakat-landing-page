@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Header from "./Components/Header";
-import Footer from "./Components/Footer";
+
 import Hero from "./Components/Hero";
 import Partners from "./Components/Partners";
 import Featuers from "./Components/Featuers";
@@ -9,6 +9,9 @@ import Benefits from "./Components/Benefits";
 import AllOverLebanon from "./Components/AllOverLebanon";
 import Prices from "./Components/Prices";
 import Testimonials from "./Components/Testimonials";
+import About from "./Components/About";
+import FAQ from "./Components/FAQ";
+import Support from "./Components/Support";
 
 export default function Home() {
   return (
@@ -17,6 +20,7 @@ export default function Home() {
       <section id="home" className="h-screen flex items-center justify-center">
         <Hero />
       </section>
+
       <div className="mt-8">
         <Partners />
       </div>
@@ -30,36 +34,43 @@ export default function Home() {
         <AllOverLebanon />
       </div>
 
-      <section
-        id="pricing"
-      >
-        <Prices/>
+      <section id="pricing">
+        <Prices />
       </section>
-     
-      <section
-        id="about"
-        className=" flex items-center justify-center bg-[#F6FBFE]"
-      >
-      <Testimonials />
-      </section>
+
       <section
         id="support"
-        className="h-screen flex items-center justify-center bg-gray-400"
+        className=" flex items-center justify-center bg-[#F6FBFE]"
       >
-        <h1 className="text-3xl">Support Section</h1>
+        <Testimonials />
       </section>
+
+      <section
+        id="about"
+        className=" h-full flex items-center justify-center my-12"
+      >
+        <About />
+      </section>
+
       <section
         id="contact"
-        className="h-screen flex items-center justify-center bg-gray-500"
+        className="flex items-center justify-center"
       >
-        <h1 className="text-3xl">Contact Section</h1>
+        <FAQ />
       </section>
+
+      <div className="my-12">
+      <Support/>
+      </div>
+
+      
       <section
         id="download"
         className="h-screen flex items-center justify-center bg-gray-600"
       >
         <h1 className="text-3xl">Download Section</h1>
       </section>
+
       {/* <Footer/> */}
     </div>
   );

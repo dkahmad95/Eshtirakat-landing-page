@@ -39,7 +39,7 @@ const Featuers = () => {
           <h1 className="text-2xl md:text-5xl font-bold mt-2 ">
             إكتشف مميزات <span className="text-[#F29912]">إشتراكات</span>
           </h1>
-          <h3 className=" w-1/2 text-sm">
+          <h3 className=" w-3/4 text-sm text-center">
             تقنيات مبتكرة وحديثة لتسهيل إدارة اشتراكات الكهرباء وتحسين الكفاءة
             والسرعة والدقة في العمل, تطوير عملك ليس بالامر الصعب بعد الان.
           </h3>
@@ -57,7 +57,7 @@ const Featuers = () => {
                     className=" w-11/12 lg:w-3/4  p-4 hover:bg-[#F6FBFE] rounded-md"
                     >
                     <div className="flex items-center justify-start gap-x-4">
-                    <div className="bg-[#011936] text-white rounded-xl w-10 h-10 flex items-center  justify-center mr-4">
+                    <div className="bg-[#011936] text-white rounded-xl min-w-8 min-h-8 md:w-10 md:h-10 flex items-center  justify-center mr-4">
                     {feature.id}
                     </div>
                     <div className="text-lg text-[#052533] font-bold cursor-pointer transition-colors duration-300">

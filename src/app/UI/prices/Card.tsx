@@ -1,7 +1,7 @@
 import React from "react";
 import Line from "../Line";
 import { CheckCircleIcon, PlusCircleIcon } from "@heroicons/react/16/solid";
-import { Button } from "../Button";
+
 
 const Card = ({activeButton}:{activeButton: string}) => {
   const plans = [
@@ -48,7 +48,7 @@ const Card = ({activeButton}:{activeButton: string}) => {
   return (
     <main className=" flex flex-col md:flex-row gap-6 ">
       {/* card 1 */}
-      <div className="w-[250px] h-[450px] flex flex-col bg-gradient-radial bg-[#FFFFFF]  rounded-lg shadow-md shadow-neutral-500  border-2 border-[#F6FBFE] ">
+      <div className="w-[250px] min-h-[450px] flex flex-col bg-gradient-radial bg-[#FFFFFF]  rounded-lg shadow-md shadow-neutral-500  border-2 border-[#F6FBFE] ">
         {/* title and price */}
         <div className="flex flex-col justify-center items-center p-4  gap-y-2">
           <span className="text-[#052533] font-bold">{plans[0].name}</span>

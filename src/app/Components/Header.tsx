@@ -12,7 +12,7 @@ const Header = () => {
   };
 
   ///fix this bug
-  const [activeSection, setActiveSection] = useState("");
+  const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
     const handleScroll: any = () => {
@@ -29,6 +29,7 @@ const Header = () => {
     console.log("activeSection", activeSection);
 
     window.addEventListener("scroll", handleScroll);
+    handleScroll()
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -46,6 +47,7 @@ const Header = () => {
               alt="arabic logo"
               width={100}
               height={100}
+              className="w-auto h-auto"
             />
           </div>
           <div className="hidden md:flex flex-row space-y-2">

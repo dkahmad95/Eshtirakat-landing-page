@@ -26,7 +26,7 @@ const Testimonials: React.FC = () => {
   const testimonials: Testimonial[] = [
     {
       id: 1,
-      profilePic: "/profilePhoto.jpg",
+      profilePic: "/pp.jpg",
       name: "يوسف الجمال",
       occupation: "المالك لاشتراكات هادي",
       testimonial:
@@ -35,7 +35,7 @@ const Testimonials: React.FC = () => {
     },
     {
       id: 2,
-      profilePic: "/profilePhoto.jpg",
+      profilePic: "/pp.jpg",
       name: "سارة أحمد",
       occupation: "مديرة مشاريع",
       testimonial:
@@ -44,7 +44,7 @@ const Testimonials: React.FC = () => {
     },
     {
       id: 3,
-      profilePic: "/profilePhoto.jpg",
+      profilePic: "/pp.jpg",
       name: "علي محمد",
       occupation: "رائد أعمال",
       testimonial:
@@ -53,7 +53,7 @@ const Testimonials: React.FC = () => {
     },
     {
       id: 4,
-      profilePic: "/profilePhoto.jpg",
+      profilePic: "/pp.jpg",
       name: "نورة السالم",
       occupation: "محاسبة",
       testimonial:
@@ -62,19 +62,19 @@ const Testimonials: React.FC = () => {
     },
     {
       id: 5,
-      profilePic: "/profilePhoto.jpg",
+      profilePic: "/pp.jpg",
       name: "خالد عبد الله",
       occupation: "مدير تسويق",
       testimonial:
-        "خدمة 'إشتراكات' غيرت طريقتي في إدارة المدفوعات الشهرية.وعات الشهرية. التطبيق ممتاز وسهل الاستخدام ويوفر الكثير من الوقت. 'إشتراكات' غيرت طريقتي في إدارة المدفوعات الشهرية. التطبيق ممتاز وسهل الاستخدام ويوفر الكثير من الوقت.",
+        "خدمة 'إشتراكات' غيرت طريقتي في إدارة المدفوعات الشهرية. التطبيق ممتاز وسهل الاستخدام ويوفر الكثير من الوقت.",
       starRating: 3.5,
     },
   ];
-
+  
   const renderStars = (rating: number) => {
     const fullStars = Math.floor(rating);
     const halfStar = rating % 1 !== 0;
-    const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
+    // const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
 
     return (
       <>
@@ -113,7 +113,7 @@ const Testimonials: React.FC = () => {
           <h1 className="text-2xl md:text-5xl font-bold mt-2">
             قصص نجاح <span className="text-[#F29912]">عملائنا</span>
           </h1>
-          <h3 className="text-sm text-center opacity-70 text-[#052533]">
+          <h3 className="text-sm text-center opacity-70 text-[#052533] w-3/4">
             استمع إلى تجارب وشهادات عملائنا الرائعين واكتشف كيف ساهمت خدماتنا في
             جعلهم سعداء وراضين.
           </h3>
@@ -139,14 +139,14 @@ const Testimonials: React.FC = () => {
         >
           {testimonials.map((testi) => (
             <SwiperSlide key={testi.id}>
-              <div className="h-[467px] w-full mt-8 flex  items-center flex-col gap-y-8">
+              <div className=" w-full mt-8 flex  items-center flex-col gap-y-8">
                 {/* image */}
                 <Image
                   src={testi.profilePic}
                   alt="client photo"
                   width={220}
                   height={220}
-                  className="rounded-full h-[160px] w-[160px] md:h-[220px] md:w-[220px]"
+                  className="rounded-full h-[160px] w-[160px] md:h-[220px] md:w-[220px] object-cover"
                 />
                 {/* name and occupation */}
                 <div className="flex flex-col items-center justify-center">
