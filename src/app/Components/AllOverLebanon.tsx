@@ -10,6 +10,8 @@ const AllOverLebanon = () => {
     { id: 4, title: "شريك", count: 42 },
   ];
 
+  
+
   return (
     <main className=" relative flex flex-col gap-y-10 items-center justify-center w-full h-[500px] overflow-hidden ">
       <Image

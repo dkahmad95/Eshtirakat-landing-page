@@ -41,14 +41,23 @@ const Hero = () => {
         </div>
 
         {/* Hero Image */}
-        <div className="hidden md:flex relative w-full justify-center items-end mt-8 md:mt-0">
-          <Image
-            src="/phone.png"
-            alt="Phone Image"
-            width={600}
-            height={600}
-            className="z-10 h-[250px] w-[400px]"
-          />
+        <div className="hidden xl:flex relative  z-10 w-[900px] h-[400px] justify-center items-end mt-8 md:mt-0">
+          {/* <div className="relative w-fit z-0 bg-red-600 flex justify-center items-center"> */}
+            <Image
+              src="/dashtab.png"
+              alt="Tab Image"
+              width={900}
+              height={900}
+              className="relative -bottom-24 "
+            />
+            <Image
+              src="/phone.png"
+              alt="Phone Image"
+              width={450}
+              height={450}
+              className="absolute z-10 left-6 "
+            />
+          {/* </div> */}
         </div>
       </div>
     </main>

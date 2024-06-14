@@ -12,6 +12,7 @@ import Testimonials from "./Components/Testimonials";
 import About from "./Components/About";
 import FAQ from "./Components/FAQ";
 import Support from "./Components/Support";
+import Form from "./Components/Form";
 
 export default function Home() {
   return (
@@ -61,6 +62,9 @@ export default function Home() {
 
       <div className="my-12">
       <Support/>
+      </div>
+      <div className="my-12">
+      <Form/>
       </div>
 
       
