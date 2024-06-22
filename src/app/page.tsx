@@ -1,6 +1,4 @@
 "use client";
-import { useEffect, useState } from "react";
-import Header from "./Components/Header";
 
 import Hero from "./Components/Hero";
 import Partners from "./Components/Partners";
@@ -13,12 +11,12 @@ import About from "./Components/About";
 import FAQ from "./Components/FAQ";
 import Support from "./Components/Support";
 import Form from "./Components/Form";
+import Footer from "./Components/Footer";
 
 export default function Home() {
   return (
     <div>
-      <Header />
-      <section id="home" className="h-screen flex items-center justify-center">
+      <section id="home">
         <Hero />
       </section>
 
@@ -40,7 +38,7 @@ export default function Home() {
       </section>
 
       <section
-        id="support"
+        
         className=" flex items-center justify-center bg-[#F6FBFE]"
       >
         <Testimonials />
@@ -53,29 +51,22 @@ export default function Home() {
         <About />
       </section>
 
-      <section
-        id="contact"
-        className="flex items-center justify-center"
-      >
+      <div className="my-12">
         <FAQ />
+      </div>
+      <section id="support">
+        <div className="my-12">
+          <Support />
+        </div>
       </section>
 
-      <div className="my-12">
-      <Support/>
-      </div>
-      <div className="my-12">
-      <Form/>
-      </div>
+      <section id="contact" className="flex items-center justify-center">
+        <div className="my-12">
+          <Form />
+        </div>
+      </section>
 
       
-      <section
-        id="download"
-        className="h-screen flex items-center justify-center bg-gray-600"
-      >
-        <h1 className="text-3xl">Download Section</h1>
-      </section>
-
-      {/* <Footer/> */}
     </div>
   );
 }

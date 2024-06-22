@@ -28,7 +28,7 @@ const About = () => {
 
   return (
     <main className=" w-full h-full flex justify-center items-center">
-      <div className="w-3/4 min-h-3/4 flex flex-col justify-center items-center gap-y-6 ">
+      <div className="w-3/4 min-h-3/4 flex flex-col justify-center items-center gap-y-6 mt-[70px] ">
         {/* title and button */}
         <div className="flex flex-col justify-center items-center gap-y-8">
           <h1 className="text-2xl md:text-5xl font-bold mt-2">

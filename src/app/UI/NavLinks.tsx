@@ -29,8 +29,9 @@ const NavLinks: React.FC<NavLinksProps> = ({
           to={link.to}
           smooth={true}
           duration={500}
-          className={`block py-2 px-4 text-white rounded-full hover:font-bold  cursor-pointer ${
-            activeSection === link.to ? "font-bold" : "" 
+         
+          className={`block py-2 px-4 text-white rounded-full hover:font-bold  cursor-pointer xl:text-lg 2xl:text-xl ${
+            activeSection == link.to ? "font-bold" : "" 
           }`}
           onClick={onClick}
         >

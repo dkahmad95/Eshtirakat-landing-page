@@ -6,7 +6,7 @@ const Support = () => {
     <main className="  w-full h-full flex justify-center  items-center">
       
      
-      <div className="relative w-3/4 flex-col flex justify-center items-center  gap-y-6  py-4">
+      <div className="relative w-3/4 flex-col flex justify-center items-center  gap-y-6  py-4 mt-[70px]">
       <Image
         src="/suppurtBg.png"
         alt="support Background"

@@ -6,9 +6,11 @@ import Card from "../UI/prices/Card";
 const Prices = () => {
   const [activeButton, setActiveButton] = useState("3 اشهر");
   return (
-    <main className="h-full w-full flex flex-col  items-center   gap-y-8">
+    
+    <main className="h-full w-full flex flex-col  items-center   gap-y-8 ">
+       
       {/* title */}
-      <div className="flex flex-col  items-center justify-center gap-y-4">
+      <div className="flex flex-col  items-center justify-center gap-y-4 mt-[70px]" >
         <h1 className="text-xl md:text-3xl font-bold mt-2 md:text-start">
           خطط وأسعار
           <span className="text-[#F29912]"> للجميع</span>

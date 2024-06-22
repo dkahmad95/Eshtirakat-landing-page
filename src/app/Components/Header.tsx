@@ -13,31 +13,29 @@ const Header = () => {
 
   ///fix this bug
   const [activeSection, setActiveSection] = useState("home");
-
   useEffect(() => {
     const handleScroll: any = () => {
       const sections = document.querySelectorAll("section");
+      let currentActiveSection = ""; // Initialize a variable to hold the active section ID
       sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
-
         if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-          //   console.log(section.id)
-          setActiveSection(section.id);
+          currentActiveSection = section.id;
         }
       });
+      setActiveSection(currentActiveSection); // Set activeSection outside the loop
     };
-    console.log("activeSection", activeSection);
-
+    
     window.addEventListener("scroll", handleScroll);
-    handleScroll()
-
+    handleScroll(); // Call handleScroll initially on component mount
+  
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50">
+    <header className="fixed top-0 left-0 right-0  z-50">
       <div className="h-[70px] w-full bg-[#073652] flex justify-center items-center">
         <div className="w-[90%] m-auto flex justify-between items-center">
           
@@ -47,12 +45,12 @@ const Header = () => {
               alt="arabic logo"
               width={100}
               height={100}
-              className="w-auto h-auto"
+              className=""
             />
           </div>
-          <div className="hidden md:flex flex-row space-y-2">
+          <div className="hidden md:flex  flex-row space-y-2">
             <NavLinks
-              className="flex md:flex-row"
+              className="flex md:flex-row "
               activeSection={activeSection}
             />
           </div>

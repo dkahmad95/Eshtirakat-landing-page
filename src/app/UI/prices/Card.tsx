@@ -48,7 +48,7 @@ const Card = ({activeButton}:{activeButton: string}) => {
   return (
     <main className=" flex flex-col md:flex-row gap-6 ">
       {/* card 1 */}
-      <div className="w-[250px] min-h-[450px] flex flex-col bg-gradient-radial bg-[#FFFFFF]  rounded-lg shadow-md shadow-neutral-500  border-2 border-[#F6FBFE] ">
+      <div className="min-w-[250px] min-h-[450px] flex flex-col bg-gradient-radial bg-[#FFFFFF]  rounded-lg shadow-md shadow-neutral-500  border-2 border-[#F6FBFE] ">
         {/* title and price */}
         <div className="flex flex-col justify-center items-center p-4  gap-y-2">
           <span className="text-[#052533] font-bold">{plans[0].name}</span>
@@ -114,7 +114,7 @@ const Card = ({activeButton}:{activeButton: string}) => {
       </div>
 
       {/* card 2 */}
-      <div className=" w-[250px] h-[450px] flex flex-col bg-gradient-radial  from-[#0F6A94] to-[#0C5678] rounded-lg shadow-md shadow-neutral-500  md:transform md:-translate-y-3 ">
+      <div className=" min-w-[250px] min-h-[450px] flex flex-col bg-gradient-radial  from-[#0F6A94] to-[#0C5678] rounded-lg shadow-md shadow-neutral-500  md:transform md:-translate-y-3 ">
         {/* title and price */}
         <div className="flex flex-col justify-center items-center p-4  gap-y-2">
           <span className=" text-white font-bold">{plans[1].name}</span>
@@ -150,7 +150,7 @@ const Card = ({activeButton}:{activeButton: string}) => {
           </div>
           <div className="flex flex-row items-center gap-x-2 m-2">
             <CheckCircleIcon className="h-4 w-4 text-white" />
-            <span className="text-xs text-white ">
+            <span className=" text-nowrap text-xs text-white ">
               دعم فني متميز على مدار 24 ساعة
             </span>
           </div>
@@ -179,7 +179,7 @@ const Card = ({activeButton}:{activeButton: string}) => {
       </div>
 
       {/* card 3 */}
-      <div className="w-[250px] h-[450px] flex flex-col  rounded-lg shadow-md shadow-neutral-500  border-2 border-[#F6FBFE] ">
+      <div className="min-w-[250px] min-h-[450px] flex flex-col  rounded-lg shadow-md shadow-neutral-500  border-2 border-[#F6FBFE] ">
         {/* title and price */}
         <div className="flex flex-col justify-center items-center p-4  gap-y-2">
           <span className="text-[#052533] font-bold">{plans[2].name}</span>
@@ -224,7 +224,7 @@ const Card = ({activeButton}:{activeButton: string}) => {
           {plans[2].featuresPluse.map((feat, index) => (
             <div key={index} className="flex flex-row items-center gap-x-2 m-2">
               <PlusCircleIcon className="h-4 w-4 text-[#052533]" />
-              <span className="text-xs text-[#052533] ">{feat}</span>
+              <span className="text-nowrap text-xs text-[#052533] ">{feat}</span>
             </div>
           ))}
         </div>

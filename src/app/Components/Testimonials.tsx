@@ -74,17 +74,9 @@ const Testimonials: React.FC = () => {
   const renderStars = (rating: number) => {
     const fullStars = Math.floor(rating);
     const halfStar = rating % 1 !== 0;
-    // const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
 
     return (
       <>
-       {/* {[...Array(emptyStars)].map((_, index) => (
-          <FontAwesomeIcon
-            key={`empty-${index}`}
-            icon={faStarEmpty}
-            className="text-gray-300 h-[32px] w-[32px]"
-          />
-        ))} */}
          {halfStar && (
           <FontAwesomeIcon
             key="half"
@@ -108,7 +100,7 @@ const Testimonials: React.FC = () => {
   return (
     <main className="flex flex-col w-full items-center">
       {/* title */}
-      <div className="flex flex-col justify-center items-center gap-y-10 mt-12">
+      <div className="flex flex-col justify-center items-center gap-y-10 mt-12 ">
         <div className="flex flex-col items-center justify-center gap-y-4">
           <h1 className="text-2xl md:text-5xl font-bold mt-2">
             قصص نجاح <span className="text-[#F29912]">عملائنا</span>

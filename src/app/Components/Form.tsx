@@ -1,12 +1,15 @@
 import Image from "next/image";
 import React from "react";
+import ContactForm from "../UI/form/ContactForm";
 
 const Form = () => {
   return (
     <main className=" w-full h-full flex justify-center  items-center">
-      <div className="w-3/4 flex justify-center items-center border-green-800 border-2">
+      <div className="w-3/4 flex justify-center items-center shadow-md shadow-neutral-500  border-2 border-[#F6FBFE] rounded-xl">
         {/* form */}
-        <div className="flex-1 border-2 border-red-700 flex justify-center items-center">form</div>
+        <div className="flex-1 flex justify-center items-center">
+          <ContactForm />
+        </div>
         {/* image */}
 
         <Image
@@ -14,7 +17,7 @@ const Form = () => {
           alt="contact"
           width={400}
           height={500}
-          className=" flex-1 h-[560px] w-[440px] object-fill "
+          className=" hidden flex-1 lg:flex h-full w-[440px] object-fill   "
         />
       </div>
     </main>
