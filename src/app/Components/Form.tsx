@@ -17,7 +17,7 @@ const Form = () => {
           alt="contact"
           width={400}
           height={500}
-          className=" hidden flex-1 lg:flex h-full object-fill   "
+          className=" hidden flex-1 lg:flex h-full w-[440px] object-fill   "
         />
       </div>
     </main>
