@@ -25,6 +25,7 @@ const NavLinks: React.FC<NavLinksProps> = ({
     <nav className={className}>
       {links.map((link, index) => (
         <Link
+       activeClass="active"
           key={link.to}
           to={link.to}
           smooth={true}

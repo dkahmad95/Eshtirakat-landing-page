@@ -11,7 +11,7 @@ import About from "./Components/About";
 import FAQ from "./Components/FAQ";
 import Support from "./Components/Support";
 import Form from "./Components/Form";
-import Footer from "./Components/Footer";
+
 
 export default function Home() {
   return (

@@ -1,9 +1,12 @@
+'use client'
 import Image from "next/image";
 
+import { animateScroll } from 'react-scroll';
 import React from "react";
 import Line from "../UI/Line";
 import {} from "@heroicons/react/16/solid";
 import Socials from "../UI/Socials";
+import { Link } from "react-scroll";
 
 const Footer = () => {
   const links = [
@@ -58,12 +61,20 @@ const Footer = () => {
       link: "#request-app",
     },
   ];
+
+
+  const scrollOptions = {
+    // your options here, for example:
+    duration: 500,
+    smooth: true,
+  };
   return (
     <footer className=" w-full bg-[#0C5678] flex flex-col justify-center items-center ">
       {/* footer container */}
       <div className="w-3/4 h-full  flex flex-col p-2 gap-y-2 ">
         {/* link to top */}
-        <span className=" w-full justify-left underline text-white text-xs  ">
+       
+        <span onClick={()=>animateScroll.scrollToTop(scrollOptions)} className=" w-full justify-left underline text-white text-xs cursor-pointer ">
           العودة إلى الأعلى
         </span>
         <div className="flex flex-row justify-between  ">
@@ -87,15 +98,25 @@ const Footer = () => {
             <span className=" text-white text-xs opacity-70 ">
               info@eshtirakat.co
             </span>
+            {/*  */}
+            <div className="md:hidden  flex flex-col items-center gap-2 mt-8 ">
+              {links2.map((link2, index) => (
+                <span className=" text-white text-s underline text-start w-full">
+                  {link2.title}
+                </span>
+              ))}
+            </div>
           </div>
           {/* 2nd */}
-          <div className="flex flex-col flex-wrap w-1/2 h-[200px] mx-4 ">
+          <div className="flex flex-row md:flex-col flex-wrap md:w-1/2 w-full md:h-[200px]  mx-4 ">
             {links.map((link, index) => (
               <div key={index} className="flex flex-col p-2 ">
                 {/* title */}
-                <span className=" text-white text-s">{link.title}</span>
+                <span className=" text-white md:text-s text-xs">
+                  {link.title}
+                </span>
                 {/* links */}
-                <span className=" text-white text-xs opacity-70  mt-2">
+                <span className=" text-white text-xs  opacity-70  mt-2">
                   {link.subtitles[0].title}
                 </span>
                 <span className=" text-white text-xs opacity-70 mt-[4px]">
@@ -105,7 +126,7 @@ const Footer = () => {
             ))}
           </div>
           {/* 3rd */}
-          <div className="flex flex-col items-center gap-2 ">
+          <div className=" hidden md:flex flex-col items-center gap-2 ">
             {links2.map((link2, index) => (
               <span className=" text-white text-s underline ">
                 {link2.title}
@@ -115,14 +136,16 @@ const Footer = () => {
         </div>
         <Line />
         {/* bottom */}
-        <div className=" flex flex-row justify-between">
-          <div>
-            <span className="text-white text-xs opacity-70">
-              {" "}
-              2024 All Rights Reserved ©️
-            </span>
-          </div>
-          <div dir="ltr" className="flex flex-row gap-x-2 justify-center items-center">
+        <div className=" flex md:flex-row flex-col md:justify-between items-center justify-center">
+          <span className="text-white text-xs opacity-70">
+            {" "}
+            2024 All Rights Reserved ©️
+          </span>
+
+          <div
+            dir="ltr"
+            className="flex flex-row gap-x-2 justify-center items-center"
+          >
             {" "}
             <span className="text-white text-xs opacity-70">Follow us:</span>
             <Socials
