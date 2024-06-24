@@ -13,7 +13,7 @@ const Form = () => {
         {/* image */}
 
         <Image
-          src="/contactimg.png"
+          src="/contactImg.png"
           alt="contact"
           width={400}
           height={500}
