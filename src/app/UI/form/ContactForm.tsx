@@ -67,13 +67,13 @@ const ContactForm: React.FC = () => {
       {/* form */}
       <form
         onSubmit={formik.handleSubmit}
-        className="flex flex-col w-full justify-center items-center gap-y-4 p-6"
+        className="flex flex-col w-full justify-center items-center gap-y-2 p-6"
       >
         <div className="flex flex-row justify-center items-center w-full">
           {/* right sec */}
-          <div className="flex flex-col w-full gap-y-2">
-            <div className="flex flex-col p-2 gap-y-2 h-20">
-              <label htmlFor="fullName">الاسم الكامل*</label>
+          <div className="flex flex-col w-full">
+            <div className="flex flex-col p-2 gap-y-2">
+              <label  className="text-xs md:text-sm  lg:text-lg"  htmlFor="fullName">الاسم الكامل*</label>
               <CustomInput
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
@@ -82,11 +82,11 @@ const ContactForm: React.FC = () => {
                 name="fullName"
               />
               {formik.touched.fullName && formik.errors.fullName ? (
-                <div className="text-red-500 text-xs mb-2">{formik.errors.fullName}</div>
+                <div className="text-red-500 text-xs">{formik.errors.fullName}</div>
               ) : null}
             </div>
-            <div className="flex flex-col p-2 gap-y-2 h-20">
-              <label htmlFor="phoneNumber">رقم الهاتف* </label>
+            <div className="flex flex-col p-2 gap-y-2">
+              <label  className="text-xs md:text-sm  lg:text-lg" htmlFor="phoneNumber">رقم الهاتف* </label>
               <CustomInput
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
@@ -95,11 +95,11 @@ const ContactForm: React.FC = () => {
                 name="phoneNumber"
               />
               {formik.touched.phoneNumber && formik.errors.phoneNumber ? (
-                <div className="text-red-500 text-xs mb-2">{formik.errors.phoneNumber}</div>
+                <div className="text-red-500 text-xs">{formik.errors.phoneNumber}</div>
               ) : null}
             </div>
-            <div className="flex flex-col p-2 gap-y-2 h-20">
-              <label htmlFor="companyName">اسم المؤسسة* </label>
+            <div className="flex flex-col p-2 gap-y-2">
+              <label  className="text-xs md:text-sm  lg:text-lg" htmlFor="companyName">اسم المؤسسة* </label>
               <CustomInput
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
@@ -108,15 +108,15 @@ const ContactForm: React.FC = () => {
                 name="companyName"
               />
               {formik.touched.companyName && formik.errors.companyName ? (
-                <div className="text-red-500 text-xs mb-2">{formik.errors.companyName}</div>
+                <div className="text-red-500 text-xs">{formik.errors.companyName}</div>
               ) : null}
             </div>
           </div>
 
           {/* left sec */}
-          <div className="flex flex-col w-full gap-y-2">
-            <div className="flex flex-col p-2 gap-y-2 h-20">
-              <label htmlFor="region">من منطقة* </label>
+          <div className="flex flex-col w-full">
+            <div className="flex flex-col p-2 gap-y-2">
+              <label  className="text-xs md:text-sm  lg:text-lg" htmlFor="region">من منطقة* </label>
               <CustomSelect
                 id="region"
                 name="region"
@@ -127,11 +127,11 @@ const ContactForm: React.FC = () => {
                 onBlur={(name, e) => formik.handleBlur(e)}
               />
               {formik.touched.region && formik.errors.region ? (
-                <div className="text-red-500 text-xs mb-2">{formik.errors.region}</div>
+                <div className="text-red-500 text-xs">{formik.errors.region}</div>
               ) : null}
             </div>
-            <div className="flex flex-col p-2 gap-y-2 h-20">
-              <label htmlFor="subscriptionSize">حجم إشتراكاتك* </label>
+            <div className="flex flex-col p-2 gap-y-2">
+              <label  className="text-xs md:text-sm  lg:text-lg" htmlFor="subscriptionSize">حجم إشتراكاتك* </label>
               <CustomSelect
                 id="subscriptionSize"
                 name="subscriptionSize"
@@ -142,11 +142,11 @@ const ContactForm: React.FC = () => {
                 onBlur={(name, e) => formik.handleBlur(e)}
               />
               {formik.touched.subscriptionSize && formik.errors.subscriptionSize ? (
-                <div className="text-red-500 text-xs mb-2">{formik.errors.subscriptionSize}</div>
+                <div className="text-red-500 text-xs">{formik.errors.subscriptionSize}</div>
               ) : null}
             </div>
             <div className="flex flex-col p-2 gap-y-2">
-              <label htmlFor="howDidYouHear">كيف تعرفت علينا؟ </label>
+              <label  className="text-xs md:text-sm  lg:text-lg" htmlFor="howDidYouHear">كيف تعرفت علينا؟ </label>
               <CustomSelect
                 id="howDidYouHear"
                 name="howDidYouHear"
@@ -157,7 +157,7 @@ const ContactForm: React.FC = () => {
                 onBlur={(name, e) => formik.handleBlur(e)}
               />
               {formik.touched.howDidYouHear && formik.errors.howDidYouHear ? (
-                <div className="text-red-500 text-xs mb-2">{formik.errors.howDidYouHear}</div>
+                <div className="text-red-500 text-xs">{formik.errors.howDidYouHear}</div>
               ) : null}
             </div>
           </div>
@@ -166,7 +166,7 @@ const ContactForm: React.FC = () => {
         <div className="w-full">
           {/* textarea */}
           <div className="flex flex-col gap-y-2 w-full">
-            <label htmlFor="message">كيف تعرفت علينا؟ </label>
+            <label  className="text-xs md:text-sm  lg:text-lg" htmlFor="message">كيف تعرفت علينا؟ </label>
             <TextArea
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -175,7 +175,7 @@ const ContactForm: React.FC = () => {
               allowClear
             />
             {formik.touched.message && formik.errors.message ? (
-              <div className="text-red-500 text-xs mb-2">{formik.errors.message}</div>
+              <div className="text-red-500 text-xs">{formik.errors.message}</div>
             ) : null}
           </div>
         </div>

@@ -102,7 +102,7 @@ const Footer = () => {
             {/* mobile view */}
             <div className="md:hidden  flex flex-col items-center gap-2 mt-8 ">
               {links2.map((link2, index) => (
-                <span className=" text-white text-s whitespace-nowrap underline text-start w-full cursor-pointer">
+                <span key={index} className=" text-white text-s whitespace-nowrap underline text-start w-full cursor-pointer">
                   {link2.title}
                 </span>
               ))}
@@ -130,8 +130,8 @@ const Footer = () => {
                 </Link>
                 <Link
                   activeClass="active"
-                  key={link.subtitles[0].link}
-                  to={link.subtitles[0].link}
+                  key={link.subtitles[1].link}
+                  to={link.subtitles[1].link}
                   smooth={true}
                   duration={500}
                 >
@@ -145,7 +145,7 @@ const Footer = () => {
           {/* 3rd */}
           <div className=" hidden md:flex flex-col items-center gap-2 ">
             {links2.map((link2, index) => (
-              <span className=" text-white text-s underline  cursor-pointer ">
+              <span key={index} className=" text-white text-s underline  cursor-pointer ">
                 {link2.title}
               </span>
             ))}
