@@ -5,7 +5,7 @@ import ContactForm from "../UI/form/ContactForm";
 const Form = () => {
   return (
     <main className=" w-full h-full flex justify-center  items-center">
-      <div className="w-3/4 flex justify-center items-center shadow-md shadow-neutral-500  border-2 border-[#F6FBFE] rounded-xl">
+      <div className="w-3/4 flex justify-center items-center shadow-md shadow-neutral-500  border-2 border-[#F6FBFE] rounded-xl mt-[70px]">
         {/* form */}
         <div className="flex-1 flex justify-center items-center">
           <ContactForm />

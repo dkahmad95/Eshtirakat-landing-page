@@ -1,7 +1,7 @@
-'use client'
+"use client";
 import Image from "next/image";
 
-import { animateScroll } from 'react-scroll';
+import { animateScroll } from "react-scroll";
 import React from "react";
 import Line from "../UI/Line";
 import {} from "@heroicons/react/16/solid";
@@ -13,36 +13,36 @@ const Footer = () => {
     {
       title: "الرئيسية",
       subtitles: [
-        { title: "مميزات البرنامج", link: "#" },
-        { title: "لماذا نحن", link: "#our-story" },
+        { title: "مميزات البرنامج", link: "home" },
+        { title: "لماذا نحن", link: "home" },
       ],
     },
     {
       title: "حولنا",
       subtitles: [
-        { title: "في كل لبنان", link: "#all-lebanon" },
-        { title: "قصتنا ورؤيتنا", link: "#our-story" },
+        { title: "في كل لبنان", link: "about" },
+        { title: "قصتنا ورؤيتنا", link: "about" },
       ],
     },
     {
       title: "الاسعار",
       subtitles: [
-        { title: "الخطط والاسعار", link: "#all-lebanon" },
-        { title: "التوفير عبر السنة", link: "#our-story" },
+        { title: "الخطط والاسعار", link: "pricing" },
+        { title: "التوفير عبر السنة", link: "pricing" },
       ],
     },
     {
       title: "دعم العملاء",
       subtitles: [
-        { title: "اتصل بنا الآن", link: "#all-lebanon" },
-        { title: "الاسئلة المتكررة ", link: "#our-story" },
+        { title: "اتصل بنا الآن", link: "support" },
+        { title: "الاسئلة المتكررة ", link: "support" },
       ],
     },
     {
       title: "تواصل مع المبيعات",
       subtitles: [
-        { title: "مكالمة هاتفية مباشرة", link: "#all-lebanon" },
-        { title: " ارسال بريد إلكتروني", link: "#our-story" },
+        { title: "مكالمة هاتفية مباشرة", link: "contact" },
+        { title: " ارسال بريد إلكتروني", link: "contact" },
       ],
     },
   ];
@@ -62,7 +62,6 @@ const Footer = () => {
     },
   ];
 
-
   const scrollOptions = {
     // your options here, for example:
     duration: 500,
@@ -71,10 +70,12 @@ const Footer = () => {
   return (
     <footer className=" w-full bg-[#0C5678] flex flex-col justify-center items-center ">
       {/* footer container */}
-      <div className="w-3/4 h-full  flex flex-col p-2 gap-y-2 ">
+      <div className="md:w-3/4 mx-8 md:mx-0 h-full  flex flex-col p-2 gap-y-2 ">
         {/* link to top */}
-       
-        <span onClick={()=>animateScroll.scrollToTop(scrollOptions)} className=" w-full justify-left underline text-white text-xs cursor-pointer ">
+        <span
+          onClick={() => animateScroll.scrollToTop(scrollOptions)}
+          className=" w-full justify-left underline text-white text-xs cursor-pointer "
+        >
           العودة إلى الأعلى
         </span>
         <div className="flex flex-row justify-between  ">
@@ -98,10 +99,10 @@ const Footer = () => {
             <span className=" text-white text-xs opacity-70 ">
               info@eshtirakat.co
             </span>
-            {/*  */}
+            {/* mobile view */}
             <div className="md:hidden  flex flex-col items-center gap-2 mt-8 ">
               {links2.map((link2, index) => (
-                <span className=" text-white text-s underline text-start w-full">
+                <span className=" text-white text-s whitespace-nowrap underline text-start w-full cursor-pointer">
                   {link2.title}
                 </span>
               ))}
@@ -116,19 +117,35 @@ const Footer = () => {
                   {link.title}
                 </span>
                 {/* links */}
-                <span className=" text-white text-xs  opacity-70  mt-2">
-                  {link.subtitles[0].title}
-                </span>
-                <span className=" text-white text-xs opacity-70 mt-[4px]">
-                  {link.subtitles[1].title}
-                </span>
+                <Link
+                  activeClass="active"
+                  key={link.subtitles[0].link}
+                  to={link.subtitles[0].link}
+                  smooth={true}
+                  duration={500}
+                >
+                  <span className=" text-white text-xs  opacity-70  mt-2 cursor-pointer">
+                    {link.subtitles[0].title}
+                  </span>
+                </Link>
+                <Link
+                  activeClass="active"
+                  key={link.subtitles[0].link}
+                  to={link.subtitles[0].link}
+                  smooth={true}
+                  duration={500}
+                >
+                  <span className=" text-white text-xs opacity-70 mt-[4px] cursor-pointer">
+                    {link.subtitles[1].title}
+                  </span>
+                </Link>
               </div>
             ))}
           </div>
           {/* 3rd */}
           <div className=" hidden md:flex flex-col items-center gap-2 ">
             {links2.map((link2, index) => (
-              <span className=" text-white text-s underline ">
+              <span className=" text-white text-s underline  cursor-pointer ">
                 {link2.title}
               </span>
             ))}
