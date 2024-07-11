@@ -36,8 +36,8 @@ const Hero = () => {
                   التطبيق الآن لمتابعة فواتيرك بسهولة
                 </p>
                 <div className="flex w-full justify-center md:justify-start gap-x-4 mt-4">
-                  <Button className="text-black">تحميل التطبيق</Button>
-                  <Button className="text-black bg-[#F29912]">
+                  <Button className="text-black text-xs md:text-sm">تحميل التطبيق</Button>
+                  <Button className="text-black bg-[#F29912] text-xs md:text-sm">
                     طلب تجريـبي
                   </Button>
                 </div>

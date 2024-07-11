@@ -5,6 +5,7 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 
 
+
 const tajawal = Tajawal({
   weight: ["200", "300", "400", "500", "700", "800", "900"],
   style: "normal",
@@ -25,6 +26,7 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl">
       <body className={tajawal.className}>
+        
         <Header />
         {children}
         <Footer />

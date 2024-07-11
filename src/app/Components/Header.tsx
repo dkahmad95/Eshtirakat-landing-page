@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Button } from "../UI/Button";
 import NavLinks from "../UI/NavLinks";
 import Image from "next/image";
+import Announcement from "./Announcement";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,6 +37,7 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0  z-50">
+      <Announcement/>
       <div className="h-[70px] w-full bg-[#073652] flex justify-center items-center">
         <div className="w-[90%] m-auto flex justify-between items-center">
           

@@ -14,7 +14,7 @@ const Partners = () => {
     <main className="flex flex-col items-center w-full h-auto gap-y-10 p-6">
       <div>
         {/* title */}
-        <span className="text-lg text-[#052533]">
+        <span className="flex text-lg text-[#052533] text-center ">
           شركاؤنا الاوائل في عالم المحروقات والكهربائيات
         </span>
       </div>

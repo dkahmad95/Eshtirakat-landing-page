@@ -69,7 +69,7 @@ const ContactForm: React.FC = () => {
         onSubmit={formik.handleSubmit}
         className="flex flex-col w-full justify-center items-center gap-y-2 p-6"
       >
-        <div className="flex flex-row justify-center items-center w-full">
+        <div className="flex flex-col md:flex-row justify-center items-center w-full">
           {/* right sec */}
           <div className="flex flex-col w-full">
             <div className="flex flex-col p-2 gap-y-2">
