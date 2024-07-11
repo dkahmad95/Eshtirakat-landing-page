@@ -86,7 +86,7 @@ const QuestionList: React.FC = () => {
       {displayedQuestions.map(({ id, question, answer }) => (
         <div key={id} className={`flex flex-col justify-center shadow-md shadow-gray-400 p-4 gap-y-4 w-full ${visibleAnswers[id] ? 'bg-white' : 'bg-[#F2F4F5]'}`}>
           <div className="flex flex-row justify-between items-center">
-            <span className="text-lg font-bold text-[#052533]">
+            <span className="text-xs md:text-sm lg:text-lg font-bold text-[#052533]">
               {question}
             </span>
             {visibleAnswers[id] ? (
@@ -103,7 +103,7 @@ const QuestionList: React.FC = () => {
           </div>
           
           {visibleAnswers[id] && (
-            <p className="text-sm text-[#052533]"> {answer} </p>
+            <p className="text-[10px] md:text-xs lg:text-sm text-[#052533]"> {answer} </p>
           )}
         </div>
       ))}
