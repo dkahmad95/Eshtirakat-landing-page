@@ -26,7 +26,7 @@ const Testimonials: React.FC = () => {
   const testimonials: Testimonial[] = [
     {
       id: 1,
-      profilePic: "/pp.jpg",
+      profilePic: '/reviews/avatar-1.png',
       name: "يوسف الجمال",
       occupation: "المالك لاشتراكات هادي",
       testimonial:
@@ -35,7 +35,7 @@ const Testimonials: React.FC = () => {
     },
     {
       id: 2,
-      profilePic: "/pp.jpg",
+      profilePic: '/reviews/avatar-2.png',
       name: "سارة أحمد",
       occupation: "مديرة مشاريع",
       testimonial:
@@ -44,7 +44,7 @@ const Testimonials: React.FC = () => {
     },
     {
       id: 3,
-      profilePic: "/pp.jpg",
+      profilePic: '/reviews/avatar-3.png',
       name: "علي محمد",
       occupation: "رائد أعمال",
       testimonial:
@@ -53,7 +53,7 @@ const Testimonials: React.FC = () => {
     },
     {
       id: 4,
-      profilePic: "/pp.jpg",
+      profilePic: '/reviews/avatar-4.png',
       name: "نورة السالم",
       occupation: "محاسبة",
       testimonial:
@@ -62,7 +62,16 @@ const Testimonials: React.FC = () => {
     },
     {
       id: 5,
-      profilePic: "/pp.jpg",
+      profilePic: '/reviews/avatar-5.png',
+      name: "خالد عبد الله",
+      occupation: "مدير تسويق",
+      testimonial:
+        "خدمة 'إشتراكات' غيرت طريقتي في إدارة المدفوعات الشهرية. التطبيق ممتاز وسهل الاستخدام ويوفر الكثير من الوقت.",
+      starRating: 3.5,
+    },
+    {
+      id: 6,
+      profilePic: '/reviews/avatar-6.png',
       name: "خالد عبد الله",
       occupation: "مدير تسويق",
       testimonial:
